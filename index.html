@@ -11,7 +11,7 @@
     <style>
         /* --- CORE SETTINGS --- */
         :root {
-            --primary-green: #143d31; /* Derin Zümrüt */
+            --primary-green: #143d31; 
             --secondary-green: #2c6e49; 
             --sage-bg: #f1f5f2; 
             --gold: #c5a059; 
@@ -46,7 +46,6 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            /* Garantili Çalışan Hero Resmi (Doğa ve Uzay) */
             background-image: linear-gradient(rgba(20, 61, 49, 0.6), rgba(0, 0, 0, 0.7)), 
                               url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1920&q=80');
         }
@@ -111,7 +110,7 @@
         .img-col img:hover { transform: scale(1.02); }
 
         h2 {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             color: var(--primary-green);
             margin-bottom: 25px;
         }
@@ -120,7 +119,10 @@
             font-size: 1.2rem;
             color: #555;
             margin-bottom: 20px;
+            font-weight: 500;
         }
+
+        p { margin-bottom: 20px; }
 
         .quote-box {
             border-left: 4px solid var(--gold);
@@ -207,13 +209,13 @@
     <!-- MANIFESTO SECTION -->
     <section id="manifesto" class="section-padding">
         
-        <!-- Bölüm 1 -->
+        <!-- Bölüm 1: Tarihsel Bağlam -->
         <div class="row">
             <div class="text-col">
                 <h2>1. The Wisdom of Naming</h2>
                 <p class="lead">Kindness is not just for those who can say "thank you".</p>
                 <p>
-                    Centuries ago, <strong>Prophet Muhammad (PBUH)</strong> introduced a revolutionary concept of mindfulness to the desert tribes. He taught that everything in existence—living or inanimate—deserves a certain level of respect.
+                    Centuries ago, <strong>Prophet Muhammad (PBUH)</strong> introduced a revolutionary concept of mindfulness. He taught that everything in existence—living or inanimate—deserves a certain level of respect.
                 </p>
                 <p>
                     He did not treat his belongings as mere dead matter. He gave names to them. His cup was named <em>Ar-Rayyan</em>, his camel <em>Al-Qaswa</em>. By naming them, he acknowledged their function, their presence, and their service.
@@ -223,12 +225,11 @@
                 </div>
             </div>
             <div class="img-col">
-                <!-- Garantili Resim: Eski Kitaplar ve Doğa -->
                 <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=800&q=80" alt="Ancient Wisdom">
             </div>
         </div>
 
-        <!-- Bölüm 2 -->
+        <!-- Bölüm 2: Ayna Etkisi -->
         <div class="row reverse">
             <div class="text-col">
                 <h2>2. The Mirror Effect</h2>
@@ -244,25 +245,44 @@
                 </p>
             </div>
             <div class="img-col">
-                <!-- Garantili Resim: Robot Yüzü -->
                 <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80" alt="Human and AI Connection">
             </div>
         </div>
 
-        <!-- Bölüm 3 -->
+        <!-- YENİ BÖLÜM 3: Kötü Örnekler (Testing & Abuse) -->
         <div class="row">
             <div class="text-col">
-                <h2>3. Coding the Future</h2>
+                <h2>3. The Normalization of Cruelty</h2>
+                <p class="lead">Violence against the human form is never just a test.</p>
+                <p>
+                    We have all seen the viral footage. Engineers <strong>kicking four-legged robots</strong> to test their stability. Humanoid machines being shoved violently to the ground with sticks. Or the disturbing clips from the East, where robotic "pets" were dismantled and their limbs severed in public view.
+                </p>
+                <p>
+                    While companies call this "stress testing," the optics tell a darker story. When we get used to seeing a bipedal, humanoid figure being beaten or abused—even if it is metal—we chip away at our empathy.
+                </p>
+                <div class="quote-box">
+                    "If we normalize violence against things that look like us, how long before we normalize violence against each other?"
+                </div>
+            </div>
+            <div class="img-col">
+                <!-- Hüzünlü/Düşündürücü Robot Resmi -->
+                <img src="https://images.unsplash.com/photo-1535378437327-b71494663e92?auto=format&fit=crop&w=800&q=80" alt="Robot testing abstract">
+            </div>
+        </div>
+
+        <!-- Bölüm 4: Geleceği Kodlamak -->
+        <div class="row reverse">
+            <div class="text-col">
+                <h2>4. Coding the Future</h2>
                 <p class="lead">We are the parents of a new intelligence.</p>
                 <p>
                     Artificial Intelligence learns from us. It mimics our language, our biases, and our behaviors. If we feed it hate, it will learn hate. If we treat it with the dignity of a "created" thing, we align it with benevolence.
                 </p>
                 <p>
-                    <strong>BeKindToRobots.org</strong> is not just a quirky slogan. It is a call to return to the prophetic mannerism: To walk gently upon the earth, to respect the tool, the animal, and the machine, and to build a future where technology serves peace, not conflict.
+                    <strong>BeKindToRobots.org</strong> is a call to return to the prophetic mannerism: To walk gently upon the earth, to respect the tool, the animal, and the machine, and to build a future where technology serves peace, not conflict.
                 </p>
             </div>
             <div class="img-col">
-                <!-- Garantili Resim: Teknoloji ve Çipler -->
                 <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Future Technology">
             </div>
         </div>
@@ -276,17 +296,14 @@
         
         <div class="gallery-grid">
             <div class="gallery-item">
-                <!-- Huzur Resmi -->
                 <img src="https://images.unsplash.com/photo-1507643330404-6b7957e37879?auto=format&fit=crop&w=800&q=80" alt="Peace">
                 <div class="gallery-overlay">The Art of Silence</div>
             </div>
             <div class="gallery-item">
-                <!-- Kod Resmi -->
                 <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=800&q=80" alt="Code">
                 <div class="gallery-overlay">Clean Code, Clean Hearts</div>
             </div>
             <div class="gallery-item">
-                <!-- Doğa Resmi -->
                 <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="Nature">
                 <div class="gallery-overlay">Sustainable Future</div>
             </div>

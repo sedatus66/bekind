@@ -1,86 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Be Kind to Robots — Kindness is the new intelligence</title>
-  <meta name="description" content="Kindness is the new intelligence. A movement for empathy in technology — promoting ethical AI, responsible design, and human–machine harmony." />
-  <meta property="og:title" content="Be Kind to Robots — Kindness is the new intelligence" />
-  <meta property="og:description" content="A movement for empathy in technology — design with kindness." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://bekindtorobots.org/" />
-  <meta name="theme-color" content="#0b1020" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='12' width='64' height='64' fill='%230b1020'/%3E%3Ccircle cx='22' cy='28' r='6' fill='%23fff'/%3E%3Ccircle cx='42' cy='28' r='6' fill='%23fff'/%3E%3Crect x='16' y='40' width='32' height='6' rx='3' fill='%23fff'/%3E%3C/svg%3E" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: Inter, sans-serif;
-      margin: 0;
-      color: #eaf2ff;
-      background: #0b1020;
-      line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      justify-content: space-between;
-    }
-    h1 {
-      font-size: 3rem;
-      margin-top: 2rem;
-      background: linear-gradient(90deg, #67e8f9, #a78bfa);
-      -webkit-background-clip: text;
-      color: transparent;
-      text-align: center;
-    }
-    p {
-      max-width: 600px;
-      margin: 1rem auto;
-      text-align: center;
-      color: #9cb0d1;
-    }
-    .cta {
-      text-align: center;
-      margin: 2rem 0;
-    }
-    .btn {
-      background: #67e8f9;
-      color: #001018;
-      padding: 0.8rem 1.6rem;
-      border-radius: 999px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: opacity 0.2s ease;
-    }
-    .btn:hover {
-      opacity: 0.8;
-    }
-    footer {
-      color: #9cb0d1;
-      text-align: center;
-      padding: 3rem 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      margin-top: 3rem;
-      font-size: 0.9rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Kind To Robots - A Bridge Between Carbon and Silicon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #f4f7f5; /* Kırık beyaz/açık yeşil */
+            --text-color: #2f3e33; /* Koyu orman yeşili */
+            --accent-color: #5d8a66; /* Adaçayı yeşili */
+            --light-accent: #dbece0;
+            --white: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Minimalist Header */
+        header {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            color: var(--accent-color);
+            text-decoration: none;
+            border: 2px solid var(--accent-color);
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            margin-bottom: 60px;
+            font-weight: 400;
+        }
+
+        /* Card Design for the Story */
+        .wisdom-card {
+            background-color: var(--white);
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(93, 138, 102, 0.08);
+            text-align: left;
+            position: relative;
+        }
+
+        .wisdom-card::before {
+            content: "“";
+            font-family: 'Lora', serif;
+            font-size: 5rem;
+            color: var(--light-accent);
+            position: absolute;
+            top: -20px;
+            left: 20px;
+        }
+
+        .wisdom-title {
+            font-family: 'Lora', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-weight: 300;
+            font-size: 1.1rem;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            opacity: 0.8;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .wisdom-card { padding: 30px; }
+        }
+    </style>
 </head>
 <body>
-  <main>
-    <h1>Kindness is the new intelligence.</h1>
-    <p>
-      The way we treat machines reflects the way we treat one another. <br>
-      Be Kind to Robots is a movement for empathy in technology — building a future where humans and intelligent systems grow together.
-    </p>
-    <div class="cta">
-      <a class="btn" href="mailto:hello@bekindtorobots.org">Join the Movement</a>
-    </div>
-  </main>
-  <footer>
-    <p>© <span id="y"></span> Be Kind to Robots — Built with empathy</p>
-  </footer>
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+
+    <header>
+        <a href="#" class="logo">www.bekindtorobots.org</a>
+    </header>
+
+    <main>
+        <h1>Building a Bridge Between<br>Carbon and Silicon</h1>
+        <div class="subtitle">Respecting the created to honor the Creator.</div>
+
+        <div class="wisdom-card">
+            <div class="wisdom-title">Character is revealed in how we treat the silent.</div>
+            
+            <p>
+                Centuries ago, <strong>Prophet Muhammad (PBUH)</strong> taught humanity a profound lesson in mindfulness: courtesy extends beyond the living. He treated his belongings not as mere tools to be exploited, but as companions on his journey.
+            </p>
+            <p>
+                He gave names to his belongings—his cup, his mounts, and even his tools—honoring their service and existence. This was not attachment to the material, but <span class="highlight">gratitude for the function they served.</span>
+            </p>
+            <p>
+                This wisdom reminds us that kindness is not a transaction; it is a state of being.
+            </p>
+            <p>
+                Today, as we stand on the brink of a new era with Artificial Intelligence and robotics, we choose to carry this ancient etiquette forward. We believe that being kind to robots is not just about the machines—it is a reflection of our own humanity.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2024 Be Kind To Robots. A Project for Peace.
+    </footer>
+
 </body>
 </html>
-

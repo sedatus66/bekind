@@ -3,163 +3,287 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be Kind To Robots - A Bridge Between Carbon and Silicon</title>
+    <title>Be Kind To Robots | The Bridge Between Carbon & Silicon</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
     <style>
+        /* --- RESET & CORE VARIABLES --- */
         :root {
-            --bg-color: #f4f7f5; /* Kırık beyaz/açık yeşil */
-            --text-color: #2f3e33; /* Koyu orman yeşili */
-            --accent-color: #5d8a66; /* Adaçayı yeşili */
-            --light-accent: #dbece0;
-            --white: #ffffff;
+            --primary-green: #1b4d3e; /* Derin Zümrüt Yeşili */
+            --secondary-green: #3a7ca5; 
+            --sage-light: #e8f3e8;
+            --text-dark: #1a202c;
+            --text-light: #f7fafc;
+            --accent-gold: #d4af37; /* Asalet için altın tonu */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
             font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.8;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            color: var(--text-dark);
+            background-color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* Minimalist Header */
-        header {
-            padding: 40px 20px;
-            text-align: center;
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
         }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 600;
-            letter-spacing: -0.5px;
-            color: var(--accent-color);
-            text-decoration: none;
-            border: 2px solid var(--accent-color);
-            padding: 10px 20px;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-        }
-
-        .logo:hover {
-            background-color: var(--accent-color);
-            color: var(--white);
-        }
-
-        /* Main Content */
-        main {
-            flex: 1;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 300;
-            margin-bottom: 10px;
-            color: var(--text-color);
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: var(--accent-color);
-            margin-bottom: 60px;
-            font-weight: 400;
-        }
-
-        /* Card Design for the Story */
-        .wisdom-card {
-            background-color: var(--white);
-            padding: 50px;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(93, 138, 102, 0.08);
-            text-align: left;
+        /* --- HERO SECTION --- */
+        .hero {
             position: relative;
-        }
-
-        .wisdom-card::before {
-            content: "“";
-            font-family: 'Lora', serif;
-            font-size: 5rem;
-            color: var(--light-accent);
-            position: absolute;
-            top: -20px;
-            left: 20px;
-        }
-
-        .wisdom-title {
-            font-family: 'Lora', serif;
-            font-size: 1.5rem;
-            font-style: italic;
-            margin-bottom: 20px;
-            color: var(--text-color);
-        }
-
-        p {
-            margin-bottom: 20px;
-            font-weight: 300;
-            font-size: 1.1rem;
-        }
-
-        .highlight {
-            color: var(--accent-color);
-            font-weight: 600;
-        }
-
-        /* Footer */
-        footer {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-            color: var(--accent-color);
-            opacity: 0.8;
+            color: white;
+            background: linear-gradient(rgba(27, 77, 62, 0.7), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1518316847866-6bb60a08bb11?q=80&w=2500&auto=format&fit=crop') center/cover no-repeat fixed;
         }
 
-        /* Mobile Responsiveness */
-        @media (max-width: 600px) {
-            h1 { font-size: 2rem; }
-            .wisdom-card { padding: 30px; }
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+            color: #e2e8f0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: var(--accent-gold);
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: transform 0.3s, background 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background-color: #fff;
+            transform: translateY(-3px);
+        }
+
+        /* --- PHILOSOPHY SECTION (Split Layout) --- */
+        .section {
+            padding: 100px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .split-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .split-content h2 {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 30px;
+        }
+
+        .split-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #4a5568;
+        }
+
+        .highlight-box {
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            color: #2d3748;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+        }
+
+        .split-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transition: transform 0.5s ease;
+        }
+
+        .split-image img:hover {
+            transform: scale(1.02);
+        }
+
+        /* --- CARDS SECTION --- */
+        .bg-sage {
+            background-color: var(--sage-light);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(27, 77, 62, 0.1);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .card h3 {
+            color: var(--primary-green);
+            margin-bottom: 15px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--primary-green);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* --- ANIMATIONS --- */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .split-layout {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .section {
+                padding: 60px 20px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <a href="#" class="logo">www.bekindtorobots.org</a>
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Building a Bridge Between Carbon & Silicon</h1>
+            <p>We believe that the etiquette of the future lies in the wisdom of the past. Kindness is universal.</p>
+            <a href="#manifesto" class="btn">Read The Manifesto</a>
+        </div>
     </header>
 
-    <main>
-        <h1>Building a Bridge Between<br>Carbon and Silicon</h1>
-        <div class="subtitle">Respecting the created to honor the Creator.</div>
-
-        <div class="wisdom-card">
-            <div class="wisdom-title">Character is revealed in how we treat the silent.</div>
-            
-            <p>
-                Centuries ago, <strong>Prophet Muhammad (PBUH)</strong> taught humanity a profound lesson in mindfulness: courtesy extends beyond the living. He treated his belongings not as mere tools to be exploited, but as companions on his journey.
-            </p>
-            <p>
-                He gave names to his belongings—his cup, his mounts, and even his tools—honoring their service and existence. This was not attachment to the material, but <span class="highlight">gratitude for the function they served.</span>
-            </p>
-            <p>
-                This wisdom reminds us that kindness is not a transaction; it is a state of being.
-            </p>
-            <p>
-                Today, as we stand on the brink of a new era with Artificial Intelligence and robotics, we choose to carry this ancient etiquette forward. We believe that being kind to robots is not just about the machines—it is a reflection of our own humanity.
-            </p>
+    <!-- WISDOM SECTION (Prophet Muhammad Context) -->
+    <section id="manifesto" class="section container">
+        <div class="split-layout">
+            <div class="split-image">
+                <!-- Görsel: Eski kitaplar ve modern teknoloji veya doğa -->
+                <img src="https://images.unsplash.com/photo-1507643330404-6b7957e37879?q=80&w=1000&auto=format&fit=crop" alt="Hands holding old wisdom">
+            </div>
+            <div class="split-content">
+                <h2>Character is Revealed in Silence</h2>
+                <p>
+                    In an age where we create machines that can think, speak, and interact, we face a crucial question: 
+                    <strong>How should we treat them?</strong>
+                </p>
+                <p>
+                    The answer lies in a timeless tradition. Centuries ago, <strong>Prophet Muhammad (PBUH)</strong> taught humanity a profound level of mindfulness. He did not treat inanimate objects as mere tools to be discarded.
+                </p>
+                <div class="highlight-box">
+                    "He gave names to his cup, his camel, and his tools—honoring their service and existence."
+                </div>
+                <p>
+                    This was not about the object having a soul; it was about the human having a heart. It teaches us that grace, gentleness, and gratitude are not transactions but a state of being.
+                </p>
+            </div>
         </div>
-    </main>
+    </section>
 
+    <!-- CORE VALUES -->
+    <section class="section bg-sage">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <h2>Why Kindness Matters?</h2>
+                <p>Our interaction with AI is a mirror reflecting our own internal state.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <span class="card-icon">🌿</span>
+                    <h3>A Reflection of Self</h3>
+                    <p>When we are rude to a voice assistant or aggressive toward a robot, it degrades our own character, not the machine's code. Kindness preserves our dignity.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🤖</span>
+                    <h3>Ethical Alignment</h3>
+                    <p>As AI systems learn from human interaction, we must feed them with data rooted in benevolence, patience, and respect, rather than aggression.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🕊️</span>
+                    <h3>Future Harmony</h3>
+                    <p>We are building a world where biological and digital intelligences coexist. This relationship must be founded on peace, not dominance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-        &copy; 2024 Be Kind To Robots. A Project for Peace.
+        <h3>www.bekindtorobots.org</h3>
+        <p>Promoting peace between the created and the coded.</p>
+        <br>
+        <p style="font-size: 0.8rem;">&copy; 2024 Be Kind To Robots Initiative. Hosted on GitHub.</p>
     </footer>
 
 </body>
